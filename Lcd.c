@@ -170,6 +170,6 @@ void lcd_DisplayOffControl(){
     lcd_DisplayOffControl (0, 0, 0);
 }
 
-void lcd_setCursor(){
-
+void lcd_setCursor(int Fila, int PosColum){
+    PosFila[]{0x00, 0x40, 0x14, 0x54};
 }
