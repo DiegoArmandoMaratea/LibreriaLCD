@@ -12,3 +12,4 @@ void lcd_SetCGRAMAddress (int AC5, int AC4, int AC3, int AC2, int AC1, int AC0);
 void lcd_WhiteDatatoRAM (int D7, int D6, int D5, int D4, int D3, int D2, int D1, int D0);
 void lcd_ReadDatafromRAM (int D7, int D6, int D5, int D4, int D3, int D2, int D1, int D0);
 void lcd_ReadBusyFlag (int BF, int AC6, int AC5, int AC4, int AC3, int AC2, int AC1, int AC0);
+void lcd_SetCursor(int Fila, int PosColum);
