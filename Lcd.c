@@ -65,7 +65,7 @@ void lcd_EntryModSet(int ID, int S){
     PTE -> PSOR = (ID<<DB1);
     PTE -> PSOR = (S<<DB0);
 }
-void lcd_DisplayOn/OffControl (int D, int B, int C){
+void lcd_DisplayOnOffControl (int D, int B, int C){
     PTE -> PSOR = (0u<<RS);
     PTE -> PSOR = (0u<<RW);
     PTE -> PSOR = (0u<<DB7);
@@ -148,4 +148,28 @@ void lcd_ReadDatafromRAM (int D7, int D6, int D5, int D4, int D3, int D2, int D1
     PTE -> PSOR = (D2<<DB2);
     PTE -> PSOR = (D1<<DB1);
     PTE -> PSOR = (D0<<DB0);
+}
+
+void lcd_SendCommand(int command){
+    
+}
+
+void lcd_scrollDisplayRight(){
+    lcd_EntryModSet(0 , 1);
+}
+
+void lcd_scrollDisplayLeft(){
+    lcd_EntryModSet(1 , 1);
+}
+
+void lcd_DisplayOnControl(){
+    lcd_DisplayOnControl (1, 1, 1);
+}
+
+void lcd_DisplayOffControl(){
+    lcd_DisplayOffControl (0, 0, 0);
+}
+
+void lcd_setCursor(){
+
 }
